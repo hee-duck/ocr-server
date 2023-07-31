@@ -1,13 +1,13 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- 게시글 상세페이지 -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'style/form.css' %}"> </head>
+    <link rel="stylesheet" href="{% static 'style/form.css' %}">
+</head>
     {% include 'header.html' %}
-
 <body>
     <section>
         <h2>게시글</h2>
@@ -18,6 +18,17 @@
             <div id="image-container">
                 <img id="loaded_file" name="loaded_file" src="">
             </div>
+            <input type="file" id="image-file" accept="image/*">
+        </div>
+
+        <!-- 이미지 파일이 있으면 텍스트로 변환할 버튼 -->
+        <div id="ocr-btn">
+            <input type="checkbox" name="language" value="eng"> 영어
+            <input type="checkbox" name="language" value="kor"> 한국어
+            <button type="button" onclick="clickOcrBtn()">텍스트 변환</button>
+        </div>
+
+        <div id="ocr-result">
             <input type="datetime" id="created_at" readonly>
             <input type="datetime" id="modified_at" readonly>
         </div>
