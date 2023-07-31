@@ -1,0 +1,40 @@
+form,
+#board-contents
+ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 60vw;
+    margin: auto;
+}
+
+#board-contents > p {
+    padding: 0 0 10px 5px;
+    font-size: 0.8em;
+}
+
+input, textarea,
+#image-container
+{
+    margin: 5px 0;
+    padding: 10px 5px;
+    border: solid 1px lightblue;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    height: 20vh;
+}
+
+input[type='button'], 
+input[type='submit']
+{
+    cursor: pointer;
+}
+
+img {
+    width: 80%;
+    margin: auto;
+}

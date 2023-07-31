@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style/form.css' %}"> 
+    <script src="{% static 'script/csrf.js' %}"></script>
+</head>
+{% include 'header.html' %}
+<body>
+    <section>
+        <h2>게시글 수정</h2>
+        <form>
+            <input type="text" id="title" name="title" placeholder="title">
+            <textarea id="contents" name="contents" autofocus></textarea>
+            <input type="file" id="file" name="loaded_file" accept="image/png, image/jpg, image/jpeg, image.gif">
+            <input type="button" value="게시글 수정" onclick="update()">
+        </form>
+    </section>
+    <script src="{% static 'script/board-api.js' %}"></script>
+</body>
+{% include 'footer.html' %}
+
+</html>

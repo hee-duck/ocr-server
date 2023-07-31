@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "ocr"
+version = "0.1.0"
+description = ""
+authors = ["han_heesoo <juntu09@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2.3"
+pytesseract = "^0.3.10"
+mysqlclient = "^2.2.0"
+pyuploadcare = "^4.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
